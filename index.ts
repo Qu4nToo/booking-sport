@@ -38,6 +38,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
+app.get('/', (req, res) => {
+  res.send('Server is running');
+});
+
 // Định nghĩa router
 app.use('/api/admin/user', routerUser);
 app.use('/api/admin/category', routerCategory);
