@@ -30,6 +30,9 @@ const allowedOrigins = [
   "http://localhost:3000",
   "https://booking-sport-frontend.vercel.app",
 ];
+app.get('/', (req, res) => {
+  res.send('Server is running');
+});
 // Middleware
 app.use(
   cors({
